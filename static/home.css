@@ -1,0 +1,82 @@
+body{
+    background-color: rgb(245, 247, 247);
+}
+
+.nav_bg{
+    background-color: rgb(78, 79, 81);
+    height: 65px;
+    
+}
+.title_text{
+    color: rgba(127, 199, 72, 0.856);
+}
+.nav-text{
+    color: rgb(255, 255, 255);
+}
+.category_btn{
+    background-color: rgba(184, 180, 180, 0.995);
+}
+
+.manu_item{
+    background-color: rgb(208, 246, 219);
+}
+
+.box{
+    box-shadow: 4px 4px 8px gray;
+    margin: 20px;
+}
+
+.box_body{
+    background-color: rgba(234, 236, 237, 0.927);
+    border: none;
+}
+
+.btn_bg{
+    background-color: rgba(127, 199, 72, 0.856);
+     
+}
+
+
+.order_history_btn{
+    margin: auto;
+    margin-top: 7vh;
+    margin-bottom: 2vh;
+}
+
+.table_body{
+    width: 90%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.buy{
+    width: 15%;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 46vh;
+}
+
+.order_title{
+    text-align: center;
+      
+}
+.footer{
+
+    padding-bottom: 30px;
+    
+    
+}
+
+ 
+
+.nav_box{
+    width: 10%;
+    margin: auto;
+
+     margin-bottom: 20px;
+     
+}
+
+.table_stl{
+    margin-bottom: 42vh;
+}

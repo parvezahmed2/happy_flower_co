@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% block content %}
+  <h2 class="order_title">Place Order for {{ flower.title }}</h2>
+  <div class="buy">
+    
+
+
+    <form method="post">
+      {% csrf_token %}
+      <label for="quantity">Quantity:</label>
+      <input type="number" class="px-5"  id="quantity" name="quantity" min="1" max="{{ flower.quantity }}">
+      <button type="submit" class="btn btn-primary mt-2">Place Order</button>
+    </form>
+  </div>
+  
+{% endblock %}  
+
+
+
+ 

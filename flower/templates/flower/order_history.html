@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+<div class="d-flex ">
+   
+  <button class=" order_history_btn     btn btn-primary"> Order History</button>
+
+</div>
+
+<div class="table_body table_stl">
+  
+<table class="table  ">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Flower Name</th>
+      <th scope="col">Category </th>
+      <th scope="col">Order Status</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for order in orders %}
+    <tr >
+      <th  scope="row">{{order.id}}</th>
+      <td>{{order.flower.title}}</td>
+      <td>{{order.flower.category.name}}</td>
+      <td>{{order.status  }}</td>
+      <td>{{order.quantity  }}</td>
+      <td>{{order.flower.price  }}</td>
+       
+    </tr>
+
+    {% endfor %}
+     
+     
+  </tbody>
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ 
+ 
+
+{% block content%}
+
+
+
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+
+<div   class="row bs mt-5">
+
+
+
+  <div class=" col-2 dropdown">
+    <button class="btn  category_btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Flower Category
+    </button>
+    <ul class="dropdown-menu manu_item">
+      {% for cat in category %}
+      <li><a class="dropdown-item" href="{% url 'category_wise_post' cat.slug %}">{{cat.name}}</a></li>
+       
+      {% endfor %}
+    </ul>
+  </div>
+
+ 
+
+
+    <div class="col-9">
+
+
+        <div class="row row-cols-1 row-cols-md-3 g-5">
+
+            {% for flower in flowers %}
+            <div class="col  w-25 box "  >
+              <div class="card h-100">
+                <img src="{{flower.image.url}}" style="width: 100%; height: 50%;" class="card-img-top" alt="...">
+                <div class="card-body box_body">
+                  <h5 class="card-title">Title : {{flower.title}}</h5>
+                  <p class="card-text">{{flower.description}}</p>
+                  <p class="card-text">Price: {{flower.price}}</p>
+                  <p class="card-text"> Quantiry : {{flower.quantity}}</p>
+                   
+                    <button class="btn  btn_bg"> <a href="{% url 'place_order'  flower_id=flower.id  %}"  class="btn " >Buy Now</a></button>
+                </div>
+              </div>
+            </div>
+             
+        
+            {% endfor  %}
+            
+             
+          </div>
+         
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<footer  class="nav_bg  footer">
+  <div class="nav_box">
+    <p class="text_cente nav-text">Happy Flower Co</p>
+  <p class="text_cente nav-text" ><a href="mailto:hege@example.com">hege@example.com</a></p>
+  </div>
+</footer>
+
+{% endblock %}
