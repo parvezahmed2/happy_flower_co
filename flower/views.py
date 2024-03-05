@@ -31,9 +31,9 @@ class FlowerListView(ListView):
         context = super().get_context_data(**kwargs)
         context['category'] = Category.objects.all()
         return context
+ 
 
-
-
+ 
 
 
 class PlaceOrderView(LoginRequiredMixin, View):

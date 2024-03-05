@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-
+{% load static %}   
 {% block content %}
 
+<section style="background-image: url('{% static 'image/Tablet login-rafiki.svg' %}');  background-repeat: no-repeat;  background-position: center;">
 
-<form action="" style="width:50%; margin: auto" method="post" >
-    <h1>Login page</h1>
-    {% csrf_token %}
-    {{form | crispy}}
-    <button class="btn btn-warning mb-5">Submit</button>
 
-</form>
+
+    <form action="" style="width:50%; margin: auto" method="post" >
+        <h1> User Login </h1>
+        {% csrf_token %}
+        {{form | crispy}}
+        <button class="btn btn-warning mb-5">Submit</button>
+        
+    </form>
+</section>
 {% endblock %}
