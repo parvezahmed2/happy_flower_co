@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-d(pqz6r9yr)@@tj4akc#0f@iwge9qj%7^aq8u6c^lqj=35ltr&
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+CSRF_TRUSTED_ORIGINS = ['https://happy-flower-co.onrender.com','https://*.127.0.0.1']
 
 # Application definition
 
