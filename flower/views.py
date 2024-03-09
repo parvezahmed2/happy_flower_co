@@ -82,3 +82,11 @@ class AddPostView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+
+
+class FlowerDetailView(DetailView):
+    model = Flower
+    pk_url_kwarg = 'id'
+    template_name = 'flower/flower_details.html'
+    context_object_name = 'flower'

@@ -4,11 +4,19 @@
 {% block content %}
 
 
-<form action="" style="width:50%; margin: auto" method="post" enctype="multipart/form-data" >
-    <h1>Create Post</h1>
-    {% csrf_token %}
-    {{form | crispy}}
-    <button class="btn btn-warning mb-5">Submit</button>
 
-</form>
+<section  style="   margin-top:100px">
+
+    <form class=""  style="width:50%;     margin: auto; " action=""   method="post" enctype="multipart/form-data" >
+        <h1>Create Post</h1>
+        {% csrf_token %}
+        {{form | crispy}}
+        <button class="btn btn-primary mb-5">Submit</button>
+    
+    </form>
+
+</section>
+
+
+
 {% endblock %}  

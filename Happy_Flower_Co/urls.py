@@ -26,7 +26,7 @@ urlpatterns = [
     path('', include('account.urls')),
     path('flower/', include('flower.urls')),
     path('', views.FlowerListView.as_view(), name='homepage'),
-    
+    path('details/<int:id>/', views.FlowerDetailView.as_view(), name='details'),
     path('category/<slug:category_slug>/', views.FlowerListView.as_view(), name='category_wise_post'),
 ]
 

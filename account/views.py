@@ -107,3 +107,7 @@ class UserUpdateView(View):
             form.save()
             return UpdateForm('profile')  # Redirect to the user's profile page
         return render(request, self.template_name, {'form': form})
+
+
+def about(request):
+    return render(request, 'account/about.html')

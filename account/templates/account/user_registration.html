@@ -3,17 +3,29 @@
 {% load static %}
 
 {% block content %}
-<section    style="background-image: url('{% static 'image/Sign up-amico.svg' %}');  background-repeat: no-repeat;  background-position: center;">
+<section    style="  width: 90%; margin:auto; padding-top:100px ; padding-bottom:50px;  background-repeat: no-repeat;  background-position: center;">
 
 
+
+
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6">
+                <form action="" style="width: 100%;" method="post">
+                    <h1 class="text-center mb-4">User Registration</h1>
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <button class="btn btn-primary btn-block mt-4">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid" src="{% static 'image/Sign up-amico.svg' %}" alt="">
+            </div>
+        </div>
+    </div>
     
 
-<form action="" style="width:50%; margin: auto" method="post" >
-    <h1> User Registration  </h1>
-    {% csrf_token %}
-    {{form | crispy}}
-    <button class="btn btn-warning mb-5">Submit</button>
-
-</form>
+ 
 </section>
 {% endblock %}

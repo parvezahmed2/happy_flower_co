@@ -80,3 +80,16 @@ body{
 .table_stl{
     margin-bottom: 42vh;
 }
+
+
+
+.booton_banner_child1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom_baner_container{
+    background-color: antiquewhite;
+    padding: 50px;
+}

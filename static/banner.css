@@ -1,0 +1,57 @@
+.booton_banner_child1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom_baner_container{
+  background-color: antiquewhite;
+  padding: 50px;
+
+  margin-bottom: 250px;
+}
+
+
+
+
+
+
+
+
+.about_banner_container{
+     
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+
+
+.about_parent1{
+ background-color: rgb(237, 224, 177);
+ width: 100%;
+ height: 331px;
+ display: flex;
+ align-items: center;
+
+ 
+ 
+  
+
+}
+
+
+.about_chaild{
+ padding: 50px;
+}
+
+.about_parent2{
+ /* background-image: url("galary1.png"); */
+ padding: 20px;
+
+  
+}

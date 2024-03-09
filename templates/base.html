@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Flower Co</title>
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -15,30 +16,41 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> 
     <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'about.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'banner.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static  'about.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static  'nav.css' %}">
+    
 </head>
 <body >
 
-  <header class="header-sec">
-    <nav class="navbar ">
-      <a class="logo" href="#">Happy Flower Co<span>.</span></a>
-      <ul class="menu-links">
-        <span id="close-menu-btn" class="material-symbols-outlined">close</span>
-        <li><a href="{% url 'homepage' %}">Home</a></li>
-        <li><a href="{% url 'addpos'%}">Add Post</a></li>
-        <li><a href="{% url 'order_history' %}">Order History</a></li>
-        {% if request.user.is_authenticated %}
-        <li><a href="{% url 'profile' %}">Profile</a></li>
-        <li><a href="{% url 'logout' %}">Logout</a></li>
-        {% else %}
-        <li><a href="{% url 'register' %}">Register</a></li>
-        <li><a href="{% url 'login' %}">Login </a></li>
-        {% endif %}
-      </ul>
-      <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
-    </nav>
-  </header>
+  
+  <header>
+    <nav class="top-nav">
+        <ul class='nav-bar'>
+            <li  ><a class="text-dark h2" href="{% url 'homepage' %}">Happy Flower Co<span>.</span></a></li>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="{% url 'addpos'%}">Add Post</a></li>
+                <li><a href="{% url 'about'%}">About</a></li>
+                <li><a href="{% url 'order_history' %}">Order History</a></li>
+                {% if request.user.is_authenticated %}
 
+                <li><a class="text-light btn btn-success" href="{% url 'profile' %}">Profile</a></li>
+                <li> <a class="text-light btn btn-success"  href="{% url 'logout' %}">Logout</a></li>
+
+                {% else %}
+
+                <li><a class="text-light btn btn-success"  href="{% url 'register' %}">Register</a></li>
+                <li><a class="text-light btn btn-success"  href="{% url 'login' %}">Login </a></li>
+                {% endif %}
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+    </header>
 
 
       {% block content %}
@@ -49,7 +61,39 @@
 
       {% endblock%}
       
-
+   
+<footer>
+  
+  <div class="footer-col mx-5">
+      <h4>Occasions</h4>
+      <ul>
+          <li><a href="#">Dried Flowers and Gifts</a></li>
+          <li><a href="#">Mother's Day Flowers</a></li>
+          <li><a href="#">Mothers day Gift Box</a></li>
+          <li><a href="#">Valentine's Day Flowers</a></li>
+          <li><a href="#">Christmas Flowers</a></li>
+      </ul>
+  </div>
+  <div class="footer-col mx-5">
+      <h4>company</h4>
+      <ul>
+          <li><a href="#">About</a></li>
+           
+          <li><a href=" ">Contact us </a></li>
+          <li><a href=" ">Cateers </a></li>
+          <li><a href=" ">Culture </a></li>
+      </ul>
+  </div>
+  <div class="footer-col mx-4 ">
+      <h4>follow us</h4>
+      <div class="links">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+  </div>
+</footer>
 
 
       <script>
